@@ -48,11 +48,21 @@ generateButtonEl.addEventListener("click", function () {
     }
     pwdChars = upperCase + lowerCase + specialChar + num;
     randomPwdArray = pwdChars.split("");
-    for (var i = 0; i < charCount; i++) {
-        randomPwdArray[i];
+
+    var pwdArray = "";
+
+    for (var i = 0; i <= charCount; i++) {
+
+        pwdArray = pwdArray + pwdChars.charAt(Math.floor(Math.random() * Math.floor(pwdChars.length - 1)));
+
+
+        // document.getElementById("password").value = pwdArray;
+
+        pwdEl.textContent = pwdArray;
 
     }
 
 }
+
 
 )
