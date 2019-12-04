@@ -24,7 +24,7 @@ generateButtonEl.addEventListener("click", function () {
 
 
 
-
+    //cerate an if else satement for each questions asked
 
     if (upperCaseQ === true) {
         var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -46,8 +46,10 @@ generateButtonEl.addEventListener("click", function () {
     } else {
         num = "";
     }
+
+    // combine the true statements into a string
     pwdChars = upperCase + lowerCase + specialChar + num;
-    randomPwdArray = pwdChars.split("");
+
 
     var pwdArray = "";
 
