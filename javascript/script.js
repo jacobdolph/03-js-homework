@@ -1,8 +1,8 @@
 //getting variables from the html doc
 var pwdBoxEl = document.getElementsByClassName("password-container");
-var pwdEl = document.getElementById("password");
-var generateButtonEl = document.getElementById("generate-password");
-var copyEl = document.getElementById("copy");
+var pwdEl = document.querySelector("#password");
+var generateButtonEl = document.querySelector("#generate-password");
+var copyEl = document.querySelector("#copy");
 
 
 
@@ -22,31 +22,33 @@ generateButtonEl.addEventListener("click", function () {
     var numbersQ = confirm("would you like to use numbers?");
     charCount = prompt("how many characters would you like to use between 8 and 126");
 
+    if (charCount > 8 && charCount < 126) {
 
+        //cerate an if else satement for each questions asked
 
-    //cerate an if else satement for each questions asked
-
-    if (upperCaseQ === true) {
-        var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (upperCaseQ === true) {
+            var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        } else {
+            upperCase = "";
+        };
+        if (lowerCaseQ === true) {
+            var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        } else {
+            lowerCase = "";
+        };
+        if (specialCharQ === true) {
+            var specialChar = "#@!%&()/";
+        } else {
+            specialChar = "";
+        };
+        if (numbersQ === true) {
+            var num = "1234567890";
+        } else {
+            num = "";
+        }
     } else {
-        upperCase = "";
-    };
-    if (lowerCaseQ === true) {
-        var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    } else {
-        lowerCase = "";
-    };
-    if (specialCharQ === true) {
-        var specialChar = "#@!%&()/";
-    } else {
-        specialChar = "";
-    };
-    if (numbersQ === true) {
-        var num = "1234567890";
-    } else {
-        num = "";
+        alert("character count invalid try again")
     }
-
     // combine the true statements into a string
     pwdChars = upperCase + lowerCase + specialChar + num;
 
@@ -61,10 +63,10 @@ generateButtonEl.addEventListener("click", function () {
         // document.getElementById("password").value = pwdArray;
 
         pwdEl.textContent = pwdArray;
-
     }
-
 }
+);
+
+console.log(pwdEl.innerHTML);
 
 
-)
