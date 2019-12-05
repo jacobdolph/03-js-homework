@@ -22,11 +22,11 @@ Once you click that button a series of prompts will pop up:
 
  The interface is pretty simple
 
- ![password-generator](assets/images/password-generator-1)
+ ![password-generator](assets/images/password-generator-1.png)
 
  and the mobile version
 
- ![password-generator](assets/images/password-generator-2)
+ ![password-generator](assets/images/password-generator-2.png)
 
  I had alot of help from my study group to figure out why I could not get the clipboard to work,
  however we couldnt figure it out.
