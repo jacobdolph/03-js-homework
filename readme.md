@@ -28,5 +28,4 @@ Once you click that button a series of prompts will pop up:
 
  ![password-generator](assets/images/password-generator-2.png)
 
- I had alot of help from my study group to figure out why I could not get the clipboard to work,
- however we couldnt figure it out.
+ After working through some issues where my clipboard wouldnt work, I found that the only way to to get the text is to grab the value of the tex from an input tag.
