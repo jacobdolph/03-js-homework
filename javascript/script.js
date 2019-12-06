@@ -62,11 +62,20 @@ generateButtonEl.addEventListener("click", function () {
 
         // document.getElementById("password").value = pwdArray;
 
-        pwdEl.textContent = pwdArray;
+        pwdEl.value = pwdArray;
     }
 }
 );
 
-console.log(pwdEl.innerHTML);
 
+copyEl.addEventListener("click", function () {
+
+    pwdEl.select();
+    pwdEl.setSelectionRange(0, 99999); /*For mobile devices*/
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+    alert("Copied the text: " + pwdEl.value);
+}
+)
 

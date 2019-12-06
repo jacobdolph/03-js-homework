@@ -2,3 +2,10 @@ p {
     word-wrap: break-word;
     height: fit-content;
 }
+
+#password {
+width: 100%;
+}
+.password-container {
+padding: 0;
+}
